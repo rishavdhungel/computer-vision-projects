@@ -12,11 +12,9 @@ def showimg(imgname, img):
 def colorcvt():
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     showimg("Gray Image",imgGray)
-
 def blur():
     imgBlur = cv2.GaussianBlur(img,(5,5),2) # use odd for ksize
     showimg("blurredImage",imgBlur)
-
 def edgeDetect():
     imgCanny = cv2.Canny(img, 100,100)
     showimg("edge detect", imgCanny)
