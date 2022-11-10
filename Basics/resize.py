@@ -58,10 +58,10 @@ def scalefactor():
 def interpolationscale():
         s_up = 1.2
         s_down = 0.6
-        inter_area = cv2.resize(img, None, fx=s_up, fy=s_up, interpolation=cv2.INTER_LINEAR)
-        inter_cubic = cv2.resize(img, None, fx=s_down, fy=s_down, interpolation=cv2.INTER_LINEAR)
+        inter_area = cv2.resize(img, None, fx=s_up, fy=s_up, interpolation=cv2.INTER_AREA)
+        inter_cubic = cv2.resize(img, None, fx=s_down, fy=s_down, interpolation=cv2.INTER_CUBIC)
         inter_linear = cv2.resize(img, None, fx=s_up, fy=s_up, interpolation=cv2.INTER_LINEAR)
-        inter_nearest = cv2.resize(img, None, fx=s_up, fy=s_up, interpolation=cv2.INTER_LINEAR)
+        inter_nearest = cv2.resize(img, None, fx=s_up, fy=s_up, interpolation=cv2.INTER_NEAREST)
         # showimg("INTER_AREA", inter_area)
         # showimg("INTER_CUBIC", inter_cubic)
         # showimg("INTER_LINEAR", inter_linear)
